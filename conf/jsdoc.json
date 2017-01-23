@@ -1,0 +1,35 @@
+{
+  "tags":
+  {
+    "allowUnknownTags": true
+  },
+  "source":
+  {
+    "include":        ["./src/js"],
+    "includePattern": ".+\\.js$",
+    "excludePattern": "doc"
+  },
+  "plugins":
+  [],
+  "templates":
+  {
+    "systemName":      "arduino_game",
+    "footer":          "",
+    "copyright":       "Copyright © 2017 by Tesselina Spaeth, License <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\">CC-BY-NC-SA-4.0</a>",
+    "navType":         "vertical",
+    "theme":           "cerulean",
+    "linenums":        true,
+    "cleverLinks":     false,
+    "monospaceLinks":  true,
+    "collapseSymbols": true,
+    "inverseNav":      false
+  },
+  "opts":
+  {
+    "template":    "node_modules/ink-docstrap/template",
+    "encoding":    "utf8",
+    "destination": "doc/jsdoc",
+    "recurse":     true,
+    "private":     true
+  }
+}

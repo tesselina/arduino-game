@@ -8,13 +8,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-
+    "ink-docstrap": "^1.3.0",
+    "johnny-five": "^0.10.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jsdoc": "./node_modules/jsdoc/jsdoc.js -c conf/jsdoc.json"
   },
-  "repository": {
-  },
+  "repository": {},
   "author": "Tesselina Späth",
   "license": "CC-BY-NC-SA-4.0"
 }
