@@ -1,0 +1,20 @@
+{
+  "name": "arduino_game",
+  "version": "1.0.0",
+  "description": "js game with arduino controller",
+  "main": "gruntfile.js",
+  "directories": {
+    "doc": "./doc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+  },
+  "author": "Tesselina Späth",
+  "license": "CC-BY-NC-SA-4.0"
+}
