@@ -1,8 +1,29 @@
 /**
- * @author    Wolfgang Kowarschick <kowa@hs-augsburg.de>
- * @copyright 2016
+ * @author    Tesselina Späth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
  * @license   CC-BY-NC-SA-4.0
  */
+
+/*requirejs.config
+({
+  baseUrl: 'js', // By default load any modules from directory js
+  paths :
+  {
+    app:      'app',
+    loadjson: 'lib/require/json',
+    text:     'lib/require/text',
+    json:     '../json'
+  }
+});
+
+requirejs
+( ['loadjson!json/init.json', 'app/init'],
+  function(initJSON, init)
+  {
+    init(window, initJSON);
+  }
+);*/
+
 
 /** @namespace main */
 var
