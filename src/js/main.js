@@ -39,7 +39,10 @@ function print (){
 socket.on('message', function(message) {
         alert('The server has a message for you: ' + message);
     });
-
+    
+    socket.on('dist', function(dist) {
+        console.log('client has dist', dist);
+    });
 /*
 
 <!-- var name = !{JSON.stringify(name)}; -->

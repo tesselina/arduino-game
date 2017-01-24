@@ -5,13 +5,8 @@ var io = require('socket.io')(http);
 
 var fs = require('fs');
 //var path = require("path");
-//var board = require('./js/board');
+var board = require('./js/board');
 var port = process.env.PORT || 3000;
-
-
-/*board.listener.on('distanceChange', function (dist) {
-  //console.log('on server', dist);
-});*/
 
 app.use(express.static('node_modules/jquery'));
 app.use(express.static('web'));
@@ -26,7 +21,10 @@ io.on('connection', function (socket) {
   socket.emit('message', 'You are connected!');
   console.log('A client is connected!');
 
-
+board.listener.on('distanceChange', function (dist) {
+  //console.log('on server', dist);
+  socket.emit('dist', dist);
+});
 
 
 });
