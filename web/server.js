@@ -4,17 +4,18 @@
 var express = require('express');
 var path = require("path");
 var app = express();
+var boardsetup = require('./js/board');
+
 
 app.use(express.static('node_modules/jquery'));
-app.use(express.static(path.join(__dirname, 'web')));
 app.use(express.static('web'));
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname + '/../views'));
+app.set('views', path.join(__dirname + '/views'));
 
 app.get('/', function(req, res) {  
   
-  res.render('home', { name: 'The index page!' })
+  res.render('home', { name: 'variable juhuu' })
 });
 
 app.listen(3000, function () {
