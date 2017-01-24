@@ -54,7 +54,7 @@ module.exports = function (grunt) {
         js:
         {
           files: ['src/js/**/*.js'],
-          tasks: ['uglify']
+          tasks: ['uglify'] //, 'jshint']
         },
         web:
         {
@@ -64,6 +64,20 @@ module.exports = function (grunt) {
             spawn: false
           }
         }
+      },
+
+      jshint:
+      {
+        all: ['gruntfile.js', 'src/**/*.js'],
+
+        options:
+        {
+          esversion: 5,
+          eqeqeq: true,
+          eqnull: true,
+          browser: true,
+          reporter: require('jshint-stylish')
+        }
       }
 
     });
@@ -72,7 +86,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'cssmin', 'watch']);
+  grunt.registerTask('default', ['uglify', 'cssmin']); //, 'jshint'
 };
