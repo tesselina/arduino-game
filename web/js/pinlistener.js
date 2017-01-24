@@ -10,8 +10,9 @@ function PinListener(ms) {
 util.inherits(PinListener, EventEmitter);
 
 
-PinListener.prototype.distanceChange = function (dist) {  
-  this.emit('distanceChange', dist);
+PinListener.prototype.distanceChange = function (dist) {
+    this.dist = dist;
+    this.emit('distanceChange', dist);
 };
 
 module.exports = PinListener;

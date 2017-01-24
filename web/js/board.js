@@ -4,11 +4,6 @@ var PinListener = require('./pinlistener');
 
 var listener = new PinListener();
 
-
-listener.on('distanceChange', function (dist) {  
-  console.log('on listener', dist);
-}); 
-
 var board = new five.Board();
 
     board.on("ready", function () {
@@ -33,7 +28,7 @@ var board = new five.Board();
         });
     });
 
-
+module.exports.listener = listener;
 /*
 var events = [];
   // Pin emits "high" and "low" events, whether it's
