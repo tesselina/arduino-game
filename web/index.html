@@ -1,0 +1,48 @@
+<!--
+ @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ @copyright 2017
+ @license   CC-BY-NC-SA-4.0
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Arduino Game</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+    <p> hallo </p>
+    <div class="container">
+        <section id="section_form">
+            <h1>Hallo was geht!</h1>
+            <form>
+                <div>
+                    <label for="input_name">Wie heißt du?</label>
+                    <input id="input_name" type="text" autofocus="autofocus" />
+                </div>
+                <div>
+                    <button type="reset">Reset</button>
+                    <button id="button_submit" type="button">Say hello</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="section_welcome" class="hidden">
+            <h1 id="text_hello">Hello, ...!</h1>
+            <p>Welcome to Multimedia Programming!</p>
+        </section>
+    </div>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost:3000');
+</script>
+
+</body>
+
+</html>
