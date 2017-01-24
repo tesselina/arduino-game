@@ -23,15 +23,14 @@ app.get('/', function (req, res) {
 });
 
 app.get('/data.json', function (req, res) {
-  //board.listener.on('distanceChange', function (dist) {
-    res.json({ title: 'Data', 'data': board.listener.dist });
-    //console.log('res.json', dist);
-  //});
+  res.json({ title: 'Data', 'data': 'blablabla' });
+
 });
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000! Yay');
 });
+
 
 
 //res.sendFile(path.join(__dirname + '/../index.html'));

@@ -37,8 +37,10 @@ function print (){
 }
 
 $.get("/data.json", function (data) {
+  if(data){
   dist = data; 
   console.log('jquery getter', data);
+  }
 });
 
 /*$http.get('/data.json').then(function (res) {

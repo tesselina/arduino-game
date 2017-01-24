@@ -16,6 +16,7 @@
     "jsdom": "^9.9.1",
     "path": "^0.12.7",
     "serialport": "^4.0.7",
+    "socket.io": "^1.7.2",
     "temporal": "^0.5.0"
   },
   "devDependencies": {
