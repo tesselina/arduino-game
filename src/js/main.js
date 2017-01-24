@@ -27,8 +27,20 @@ http.createServer(function (request, response) {
 
 //var Game = require('../../src/js/app/game');
 
-console.log('i love you fucker');
-$.get( "/", function( data ) {
-  name = data.name;
-  console.log('jquery getter', name);
+
+var v_timer = setInterval(print, 200);
+var dist;
+
+console.log('i love you fucker', name);
+function print (){
+  console.log('test in main ', name, dist);
+}
+
+$.get("/data.json", function (data) {
+  dist = data; 
+  console.log('jquery getter', data);
 });
+
+/*$http.get('/data.json').then(function (res) {
+  console.log(res.data);
+});*/

@@ -7,7 +7,7 @@ var app = express();
 var board = require('./js/board');
 
 board.listener.on('distanceChange', function (dist) {
-  console.log('on server', dist);
+  //console.log('on server', dist);
 });
 
 app.use(express.static('node_modules/jquery'));
@@ -19,6 +19,14 @@ app.set('views', path.join(__dirname + '/views'));
 app.get('/', function (req, res) {
 
   res.render('home', { name: board.listener.dist });
+  res.json()
+});
+
+app.get('/data.json', function (req, res) {
+  //board.listener.on('distanceChange', function (dist) {
+    res.json({ title: 'Data', 'data': board.listener.dist });
+    //console.log('res.json', dist);
+  //});
 });
 
 app.listen(3000, function () {

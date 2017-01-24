@@ -21,56 +21,10 @@ var board = new five.Board();
             strobe[loop.called % 2 === 0 ? "high" : "low"]();
             // Query the analog pin for its current state.
             analog.query(function (state) {
-                var dist = (6762 / (state.value - 9)) - 4;
-                listener.distanceChange(dist); 
-                // console.log('A0 pin:', state.value, dist);
+                var voltToCM = (3027.4/state.value)^ 1.2134
+                listener.distanceChange(voltToCM); 
             });
         });
     });
 
 module.exports.listener = listener;
-/*
-var events = [];
-  // Pin emits "high" and "low" events, whether it's
-  // input or output.
-  ["high", "low"].forEach(function(state) {
-    strobe.on(state, function() {
-      if (events.indexOf(state) === -1) {
-        console.log("Event emitted for:", state, "on", this.addr);
-        events.push(state);
-      }
-    });
-  });
-
-*/
-
-/*
-int redpin = 0;
-int led1 =11;
-int led2 = 10;
-int i, val;
-
-void setup(){
-  pinMode(redpin,OUTPUT);
-  pinMode(led1, OUTPUT);
-  pinMode(led2, OUTPUT);
-  Serial.begin(9600);
-}
- 
-void loop(){
-  i=analogRead(redpin);
-  val=(6762/(i-9))-4;
-  Serial.println(val);
-  if(val<100){
-    digitalWrite(led1, HIGH);
-    digitalWrite(led2, LOW);
-    delay(300);
-    digitalWrite(led1, LOW);
-  } else {
-    digitalWrite(led1, LOW);
-    digitalWrite(led2, HIGH);
-    delay(300);
-    digitalWrite(led2, LOW);
-  }
-  delay(300);
-}*/
