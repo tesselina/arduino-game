@@ -38,8 +38,10 @@ define
             // Collision detection and handling.
             function all_collisions() {
                 collisionBorderPlayer(border, player, stop);
-                collisionRingPlayer(ring, player, function () { score.value++; });
-                //collisionStageBall(stage, l_ball, stop);
+                collisionRingPlayer(ring, player, function () {
+                    score.value++;
+                    ring_generator.toggle(stage, player.r); 
+                });
             }
 
             // Stop the game.
@@ -72,6 +74,6 @@ define
                 model_loop.start();
             }
         }
-
+        
         return game;
     });
