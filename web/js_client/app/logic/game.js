@@ -38,7 +38,7 @@ define
             // Collision detection and handling.
             function all_collisions() {
                 collisionBorderPlayer(border, player, stop);
-                collisionRingPlayer(ring, player, function () {
+                collisionRingPlayer(ring_generator.model, player, function () {
                     score.value++;
                     ring_generator.toggle(stage, player.r); 
                 });

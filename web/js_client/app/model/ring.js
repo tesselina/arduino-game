@@ -14,7 +14,7 @@ define
             range.min = player_radius + 10;
 
             this.x = canvas.width / 2;
-            this.y = (canvas.height - canvas.topbar) / 2;
+            this.y = (canvas.height - canvas.topbar) / 2 + canvas.topbar;
             this.r = some(range);
 
             this.show();

@@ -16,12 +16,14 @@ define
      */
     function ViewLoop(my_window, canvas, views) {
       var context = canvas.getContext("2d");
+      var drawTopBar = this.drawTopBar;
 
       this.v_window = my_window;
 
       this.m_update_view = function m_update_view() {
         // clear canvas
         context.clearRect(0, 0, canvas.width, canvas.height);
+        drawTopBar(context, canvas); 
 
         for (var k in views) {
           if (views[k].draw != null) {
@@ -35,18 +37,22 @@ define
 
     ViewLoop.prototype =
       {
-        start:
-        function () {
+        start: function () {
           if (this.v_timer == null)
           { this.v_timer = this.v_window.requestAnimationFrame(this.m_update_view); }
         },
 
-        stop:
-        function () {
+        stop: function () {
           if (this.v_timer != null) {
             this.v_window.cancelAnimationFrame(this.v_timer);
             delete this.v_timer;
           }
+        },
+        drawTopBar: function (ctx, canvas) {
+          ctx.beginPath();
+          ctx.rect(0, 0, canvas.width, 50);
+          ctx.fillStyle = '#CCC';
+          ctx.fill();
         }
       };
 

@@ -22,6 +22,7 @@ define
           // move around all movable objects
           for (var i = 0, n = models.length; i < n; i++)
           { models[i].move(l_seconds); }
+          //console.log('loop border: ', models[0].visible, 'player: ', models[1].visible);
 
           // detect and handle collision (a posteriori)
           all_collisions();

@@ -57,7 +57,7 @@ define
         view_score = new ViewText(model_score, json.view.score),
 
         model_button = new ModelButton(json.model.game_button),
-        view_button = new ViewButton(model_button, json.view.game_button, l_document),
+        view_button = new ViewButton(model_button, json.view.game_button, my_window.document),
 
         model_info = new ModelText(json.model.info),
         view_info = new ViewText(model_info, json.view.info),

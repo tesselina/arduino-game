@@ -5,8 +5,8 @@
  */
 
 define
-    (['wk/view/WKcImage'],
-    function (WKcImage) {
+    ([],
+    function () {
         "use strict";
 
         /**
@@ -21,6 +21,7 @@ define
             if (json.color) this.color = json.color;
             this.borderWidth = json.borderWidth || 0;
             this.borderColor = json.borderColor || '#000';
+            console.log('circle view created', this);
         }
 
         ViewCircle.prototype =
@@ -31,19 +32,17 @@ define
                  * @param context The 2d context where the ball is to be drawn.
                  */
                 draw: function (context) {
-
                     if (this.model.visible === true) {
                         context.beginPath();
                         context.arc(this.model.x, this.model.y, this.model.r, 0, 2 * Math.PI);
+                        context.lineWidth = this.borderWidth;
+                        context.fillStyle = this.color;
                         if (this.borderWidth > 0) {
                             context.lineWidth = this.borderWidth;
                             context.strokeStyle = this.borderColor;
                             context.stroke(); // Draw the border.
                         }
-                        if (!this.color) {
-                            context.fillStyle = this.color;
-                            context.fill();     // Fill the inner area of the ball with its color.
-                        }
+                        context.fill();     // Fill the inner area of the ball with its color.
                     }
                 }
             };

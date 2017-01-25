@@ -2,4 +2,24 @@
  * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
  * @copyright 2017
  * @license   CC-BY-NC-SA-4.0
- */body,html{height:100%}html{display:table;width:100%}body{display:table-cell;text-align:center;vertical-align:middle;background-color:#C5E}h1{font-family:sans-serif;font-size:160%;padding-bottom:0;margin-bottom:0}#section_form>h1{margin-bottom:1ex}p{font-family:serif;font-size:100%}button,input,label{width:10em;font-size:100%;display:inline-block;box-sizing:border-box;margin-bottom:.5ex}.hidden{display:none}
+ */
+
+h1 {
+    font-family: Verdana, Geneva, sans-serif
+}
+
+body {
+    text-align: center;
+    padding: 10px;
+    background-color: #413746;
+    vertical-align: middle;
+}
+
+#canvas {
+    background-color: #413746;
+    /*margin: 10px, auto, 0;*/
+}
+
+.hidden {
+    display: none;
+}

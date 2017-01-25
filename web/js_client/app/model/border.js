@@ -13,7 +13,7 @@ define
             this.r_start = json.r.start;
             this.vr_start = json.vr;
             this.x = canvas.width / 2;
-            this.y = (canvas.height - canvas.topbar) / 2;
+            this.y = (canvas.height - canvas.topbar) / 2 + canvas.topbar;
 
             this.reset(); // initializes further attributes
         }
@@ -71,7 +71,7 @@ define
                   */
                 move:
                 function (p_seconds) {
-                    this.r += this.vr * p_seconds;
+                    //this.r += this.vr * p_seconds;
                 }
             };
 

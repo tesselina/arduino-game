@@ -1,12 +1,11 @@
 {
     "canvas": {
         "element": "canvas",
-        "width": 600,
-        "height": 500,
-        "topbar": 100,
+        "width": 500,
+        "height": 550,
+        "topbar": 50,
         "color": "#413746"
     },
-    "test": "testing text",
     "game": {
         "fps": 60,
         "timeoutRing": {
@@ -22,7 +21,7 @@
     "model": {
         "game_button": {},
         "border": {
-            "vr": 20,
+            "vr": 5,
             "r": {
                 "start": 250,
                 "range": {
@@ -69,10 +68,10 @@
             "color": "#413746"
         },
         "border": {
-            "color": "#fff"
+            "color": "#CCC"
         },
         "ring": {
-            "color": "#fff",
+            "color": "#CCC",
             "borderWidth": 5,
             "borderColor": [
                 "#88ff76",
@@ -92,5 +91,5 @@
             "font": "bold 20px \"Courier New\", Courier, monospace",
             "textBaseline": "top"
         }
-    },
+    }
 }

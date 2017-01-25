@@ -15,7 +15,7 @@ define
         function ModelPlayer(json, canvas) {
             this.r_start = json.r.start;
             this.x = canvas.width / 2;
-            this.y = (canvas.height - canvas.topbar) / 2;
+            this.y = (canvas.height - canvas.topbar) / 2 + canvas.topbar;
 
             this.reset(); // initializes further attributes
         }
