@@ -7,7 +7,7 @@
         "color": "#413746"
     },
     "game": {
-        "fps": 60,
+        "fps": 40,
         "timeoutRing": {
             "@some": "int",
             "min": 200,
@@ -21,7 +21,7 @@
     "model": {
         "game_button": {},
         "border": {
-            "vr": 5,
+            "vr": 10,
             "r": {
                 "start": 250,
                 "range": {
@@ -71,7 +71,7 @@
             "color": "#CCC"
         },
         "ring": {
-            "color": "#CCC",
+            "color": "#fff",
             "borderWidth": 5,
             "borderColor": [
                 "#88ff76",

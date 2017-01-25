@@ -21,7 +21,11 @@ define
             if (json.color) this.color = json.color;
             this.borderWidth = json.borderWidth || 0;
             this.borderColor = json.borderColor || '#000';
-            console.log('circle view created', this);
+            if(json.borderColor instanceof Array){
+                var colors = json.borderColor;
+                this.borderColor = colors[Math.floor(Math.random()*colors.length)];;
+            }
+            console.log('all circles',this.borderColor);
         }
 
         ViewCircle.prototype =
@@ -41,6 +45,7 @@ define
                             context.lineWidth = this.borderWidth;
                             context.strokeStyle = this.borderColor;
                             context.stroke(); // Draw the border.
+                            console.log('ring draw', this.model.r);
                         }
                         context.fill();     // Fill the inner area of the ball with its color.
                     }

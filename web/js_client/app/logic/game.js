@@ -6,9 +6,9 @@
 
 define
     (['collision/border_player', 'collision/ring_player',
-        'model/loop'
+        'collision/border_ring', 'model/loop'
     ],
-    function (collisionBorderPlayer, collisionRingPlayer, ModelLoop) {
+    function (collisionBorderPlayer, collisionRingPlayer, collisionBorderRing, ModelLoop) {
         "use strict";
 
         function game(json, models) {
@@ -37,10 +37,11 @@ define
 
             // Collision detection and handling.
             function all_collisions() {
+                collisionBorderRing(border, ring_generator.model);
                 collisionBorderPlayer(border, player, stop);
                 collisionRingPlayer(ring_generator.model, player, function () {
                     score.value++;
-                    ring_generator.toggle(stage, player.r); 
+                    ring_generator.toggle(stage, player.r);
                 });
             }
 
@@ -48,7 +49,7 @@ define
             function stop() {
                 model_loop.stop();
                 border.hide();
-                //ring.hide();
+                player.hide();
 
                 button.label = json.start;
                 button.onClick = start;
@@ -74,6 +75,6 @@ define
                 model_loop.start();
             }
         }
-        
+
         return game;
     });

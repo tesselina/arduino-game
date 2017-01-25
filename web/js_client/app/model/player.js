@@ -61,7 +61,7 @@ define
                 function (distance) {
                     // react only if the ball is not already moving
                     if (this.visible === true) {
-                        this.vr = distance - this.r
+                        this.vr = distance - this.r;
                     }
                 },
 

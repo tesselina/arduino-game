@@ -58,7 +58,7 @@ define
                 start:
                 function () {
                     // react only if the ball is not already moving
-                    if (this.visible === true && this.vx === 0) {
+                    if (this.visible === true && this.vr === 0) {
                         this.vr = this.vr_start;
                     }
                 },
@@ -71,7 +71,7 @@ define
                   */
                 move:
                 function (p_seconds) {
-                    //this.r += this.vr * p_seconds;
+                    this.r += this.vr * p_seconds;
                 }
             };
 
