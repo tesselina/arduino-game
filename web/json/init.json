@@ -1,8 +1,10 @@
 {
     "canvas": {
         "element": "canvas",
-        "width": 500,
-        "height": 500
+        "width": 600,
+        "height": 500,
+        "topbar": 100,
+        "color": "#413746"
     },
     "test": "testing text",
     "game": {
@@ -20,6 +22,7 @@
     "model": {
         "buttonStartStop": {},
         "border": {
+            "vr": 20,
             "r": {
                 "start": 250,
                 "range": {
@@ -27,33 +30,60 @@
                     "min": 50,
                     "max": 250
                 }
-            },
-            "player": {
-                "r": {
-                    "start": 50,
-                    "min": 25,
-                    "max": 250
-                }
-            },
-            "rings": {
-                "r": {
-                    "@some": "int",
-                    "max": 240
-                }
-            },
-            "info": {
-                "pos": {
-                    "x": 10,
-                    "y": 130
-                }
-            },
-            "score": {
-                "pos": {
-                    "x": 5,
-                    "y": 3
-                },
-                "template": "Punkte: $1",
-                "value": 0
             }
+        },
+        "player": {
+            "r": {
+                "start": 50,
+                "min": 25,
+                "max": 250
+            }
+        },
+        "ring": {
+            "r": {
+                "@some": "int",
+                "max": 240
+            }
+        },
+        "info": {
+            "pos": {
+                "x": 10,
+                "y": 130
+            }
+        },
+        "score": {
+            "pos": {
+                "x": 5,
+                "y": 3
+            },
+            "template": "Punkte: $1",
+            "value": 0
         }
-    }
+    },
+    "view": {
+        "game_button": {
+            "elementID": "game_button"
+        },
+        "player": {
+            "color": "#413746"
+        },
+        "border": {
+            "color": "#fff"
+        },
+        "ring": {
+            "color": "#fff",
+            "borderWidth": 5,
+            "borderColor": ["#88ff76", "#76cc77", "#ff7a7a", "#ffda7a" ,"#9d7aff"]
+        },
+        "info": {
+            "color": "",
+            "font": "bold 25px Verdana, Geneva, sans-serif",
+            "textAlign": "center"
+        },
+        "score": {
+            "color": "#000000",
+            "font": "bold 20px \"Courier New\", Courier, monospace",
+            "textBaseline": "top"
+        }
+    },
+}
