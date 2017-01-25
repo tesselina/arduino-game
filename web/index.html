@@ -15,34 +15,14 @@
 </head>
 
 <body>
-    <p> hallo </p>
     <div class="container">
-        <section id="section_form">
-            <h1>Hallo was geht!</h1>
-            <form>
-                <div>
-                    <label for="input_name">Wie heißt du?</label>
-                    <input id="input_name" type="text" autofocus="autofocus" />
-                </div>
-                <div>
-                    <button type="reset">Reset</button>
-                    <button id="button_submit" type="button">Say hello</button>
-                </div>
-            </form>
-        </section>
-
-        <section id="section_welcome" class="hidden">
-            <h1 id="text_hello">Hello, ...!</h1>
-            <p>Welcome to Multimedia Programming!</p>
-        </section>
+        <div id="game_button"></div>
+        <canvas id="canvas"></canvas>
     </div>
-
-<script src="/socket.io/socket.io.js"></script>
-<script>
-    var socket = io.connect('http://localhost:3000');
-</script>
-<script data-main="js_client/main" src="js_client/lib/require/require.js"></script>
-<!--<script type="text/javascript" src="js_client/main.js"></script>-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>var socket = io.connect('http://localhost:3000');</script>
+    <script data-main="js_client/main" src="js_client/lib/require/require.js"></script>
+    <!--<script type="text/javascript" src="js_client/main.js"></script>-->
 </body>
 
 </html>

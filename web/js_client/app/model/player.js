@@ -10,12 +10,12 @@ define
          *            the frame rate of the game, can be computed. An it can be drawn on the 2d context
          *            of a canvas element.
          *
-         * @param p_init A JSON object containing all data initialization information.
+         * @param json A JSON object containing all data initialization information.
          */
-        function ModelPlayer(p_init, p_canvas) {
-            this.r_start = p_init.r.start;
-            this.x = p_canvas/2;
-            this.y = p_canvas/2;
+        function ModelPlayer(json, canvas) {
+            this.r_start = json.r.start;
+            this.x = canvas.width / 2;
+            this.y = (canvas.height - canvas.topbar) / 2;
 
             this.reset(); // initializes further attributes
         }
@@ -61,7 +61,7 @@ define
                 function (distance) {
                     // react only if the ball is not already moving
                     if (this.visible === true) {
-                        this.vr = distance-this.r
+                        this.vr = distance - this.r
                     }
                 },
 

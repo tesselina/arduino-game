@@ -15,12 +15,12 @@
             "max": 500
         },
         "welcome": "Sammle Ringe",
-        "ballLost": "Du hast verloren",
-        "startGame": "Starten",
-        "stopGame": "Beenden"
+        "gameover": "Du hast verloren",
+        "start": "Starten",
+        "stop": "Beenden"
     },
     "model": {
-        "buttonStartStop": {},
+        "game_button": {},
         "border": {
             "vr": 20,
             "r": {
@@ -40,6 +40,7 @@
             }
         },
         "ring": {
+            "limit": 1,
             "r": {
                 "@some": "int",
                 "max": 240
@@ -73,7 +74,13 @@
         "ring": {
             "color": "#fff",
             "borderWidth": 5,
-            "borderColor": ["#88ff76", "#76cc77", "#ff7a7a", "#ffda7a" ,"#9d7aff"]
+            "borderColor": [
+                "#88ff76",
+                "#76cc77",
+                "#ff7a7a",
+                "#ffda7a",
+                "#9d7aff"
+            ]
         },
         "info": {
             "color": "",

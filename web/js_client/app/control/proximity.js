@@ -7,12 +7,10 @@ define
     function () {
         "use strict";
 
-        //var module =  ...;
         function controlProximity(m_player) {
-/*            var range;
             socket.on('range', function (state) {
-                range = state;
-            });*/
+                if (state === false) m_player.start(m_player.r);
+            });
             socket.on('dist', function (dist) {
                 m_player.start(dist);
             });
