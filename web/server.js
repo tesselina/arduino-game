@@ -21,34 +21,21 @@ io.on('connection', function (socket) {
   socket.emit('message', 'You are connected!');
   console.log('A client is connected!');
 
-board.listener.on('distanceChange', function (dist) {
-  //console.log('on server', dist);
-  socket.emit('dist', dist);
-});
+  board.listener.on('distanceChange', function (dist) {
+    console.log('server distance change', dist, this);
+    //socket.emit('dist', dist);
+  });
 
+  board.listener.on('range', function (state) {
+    console.log('server out of range', state, this);
+    //socket.emit('outOfRange', false);
+  });
 
 });
 
 http.listen(port, function () {
   console.log('Example app listening on', port);
 });
-
-
-
-
-
-/*
-app.get('/', function (req, res) {
-  res.render('home', { name: board.listener.dist });
-});
-app.get('/', function(req,res){
-    res.sendFile(__dirname + '/index.html');
-});
-
-app.get('/data.json', function (req, res) {
-  res.json({ title: 'Data', 'data': 'blablabla' });
-});
-*/
 
 
 
