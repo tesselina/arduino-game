@@ -1,0 +1,59 @@
+{
+    "canvas": {
+        "element": "canvas",
+        "width": 500,
+        "height": 500
+    },
+    "test": "testing text",
+    "game": {
+        "fps": 60,
+        "timeoutRing": {
+            "@some": "int",
+            "min": 200,
+            "max": 500
+        },
+        "welcome": "Sammle Ringe",
+        "ballLost": "Du hast verloren",
+        "startGame": "Starten",
+        "stopGame": "Beenden"
+    },
+    "model": {
+        "buttonStartStop": {},
+        "border": {
+            "r": {
+                "start": 250,
+                "range": {
+                    "@some": "int",
+                    "min": 50,
+                    "max": 250
+                }
+            },
+            "player": {
+                "r": {
+                    "start": 50,
+                    "min": 25,
+                    "max": 250
+                }
+            },
+            "rings": {
+                "r": {
+                    "@some": "int",
+                    "max": 240
+                }
+            },
+            "info": {
+                "pos": {
+                    "x": 10,
+                    "y": 130
+                }
+            },
+            "score": {
+                "pos": {
+                    "x": 5,
+                    "y": 3
+                },
+                "template": "Punkte: $1",
+                "value": 0
+            }
+        }
+    }

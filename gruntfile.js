@@ -39,7 +39,8 @@ module.exports = function (grunt) {
         minimize:
         {
           files: {
-            'web/js/main.js': ['src/js/main.js']
+            'web/js_client/main.js': ['src/js/main.js'],
+            'web/js_client/app/init.js': ['src/js/app/init.js'],
           }
         }
       },
