@@ -47,17 +47,10 @@
             }
         },
         "info": {
-            "pos": {
-                "x": 10,
-                "y": 130
-            }
+            "value": ""
         },
         "score": {
-            "pos": {
-                "x": 5,
-                "y": 3
-            },
-            "template": "Punkte: $1",
+            "template": "Ringe: $1",
             "value": 0
         }
     },
@@ -66,10 +59,10 @@
             "elementID": "game_button"
         },
         "player": {
-            "color": "#413746"
+            "color": "#52515c"
         },
         "border": {
-            "color": "#CCC"
+            "color": "#eceaff"
         },
         "ring": {
             "color": "rgba(225,225,225,0)",
@@ -83,14 +76,10 @@
             ]
         },
         "info": {
-            "color": "",
-            "font": "bold 25px Verdana, Geneva, sans-serif",
-            "textAlign": "center"
+            "element": "info"
         },
         "score": {
-            "color": "#000000",
-            "font": "bold 20px \"Courier New\", Courier, monospace",
-            "textBaseline": "top"
+            "element": "score"
         }
     }
 }

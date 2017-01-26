@@ -51,7 +51,7 @@ define
         drawTopBar: function (ctx, canvas) {
           ctx.beginPath();
           ctx.rect(0, 0, canvas.width, 50);
-          ctx.fillStyle = '#CCC';
+          ctx.fillStyle = '#eceaff';
           ctx.fill();
         }
       };

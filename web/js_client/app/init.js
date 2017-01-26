@@ -54,13 +54,13 @@ define
         view_ring = new ViewCircle(ring_generator, json.view.ring),
 
         model_score = new ModelText(json.model.score),
-        view_score = new ViewText(model_score, json.view.score),
+        view_score = new ViewText(model_score, json.view.score, my_window.document),
 
         model_button = new ModelButton(json.model.game_button),
         view_button = new ViewButton(model_button, json.view.game_button, my_window.document),
 
         model_info = new ModelText(json.model.info),
-        view_info = new ViewText(model_info, json.view.info),
+        view_info = new ViewText(model_info, json.view.info, my_window.document),
 
         models = {
           stage: canvas_info,

@@ -11,9 +11,6 @@ define
 
   function ModelText(p_init)
   {
-    this.x        = p_init.pos.x;
-    this.y        = p_init.pos.y;
-
     this.template = p_init.template;
     this.value    = p_init.value;
 

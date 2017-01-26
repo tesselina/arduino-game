@@ -14,7 +14,9 @@ define
                 }
             });
             socket.on('dist', function (dist) {
-                m_player.start(dist*5.5);
+                var val = dist*5.5;
+            if(dist >= 40) val= dist*6;
+                m_player.start(val);
             });
         }
 

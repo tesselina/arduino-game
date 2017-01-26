@@ -10,14 +10,61 @@ h1 {
 
 body {
     text-align: center;
-    padding: 10px;
-    background-color: #413746;
+    background-color: #52515c;
+    vertical-align: middle;
+    padding: 50px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 50px;
+    padding-top: 0;
+    max-width: 500px;
+    background-color: #eceaff;
+    position: relative;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
     vertical-align: middle;
 }
 
+#topbar {
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    top: 0px;
+}
+
+#ampel,
+#game_button,
+#score {
+    padding: 10px;
+    height: 30px;
+    width: 130px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#game_button {
+    cursor: hand;
+    cursor: pointer;
+    background-color: #b9b3f7;
+    width: 180px;
+}
+
+#info {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    font-size: 40px;
+    top: 250px;
+    color: #eceaff;
+}
+
 #canvas {
-    background-color: #413746;
-    /*margin: 10px, auto, 0;*/
+    background-color: #52515c;
+    margin: 10px, 10px;
 }
 
 .hidden {
