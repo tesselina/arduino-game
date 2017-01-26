@@ -13,9 +13,6 @@ define
         RingGenerator.prototype =
             {
                 toggle: function (canvas, player_radius) {
-                    if (this.model) {
-                        delete this['model'];
-                    }
                     this.model = new this.constructor(this.init, canvas, player_radius);
                     this.count++;
                     return this.model;

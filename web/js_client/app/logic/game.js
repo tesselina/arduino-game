@@ -11,7 +11,7 @@ define
     function (collisionBorderPlayer, collisionRingPlayer, collisionBorderRing, ModelLoop) {
         "use strict";
 
-        function game(json, models) {
+        function game(json, models, view_ring) {
 
             var stage = models.stage,
                 border = models.border,
@@ -40,8 +40,10 @@ define
                 collisionBorderRing(border, ring_generator.model);
                 collisionBorderPlayer(border, player, stop);
                 collisionRingPlayer(ring_generator.model, player, function () {
+                    console.log('player hits');
                     score.value++;
                     ring_generator.toggle(stage, player.r);
+                    view_ring.changeBorderColor();
                 });
             }
 

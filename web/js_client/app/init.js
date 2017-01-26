@@ -51,7 +51,7 @@ define
         view_player = new ViewCircle(model_player, json.view.player),
 
         ring_generator = new RingGenerator(json.model.ring),
-        view_ring = new ViewCircle(ring_generator.model, json.view.ring),
+        view_ring = new ViewCircle(ring_generator, json.view.ring),
 
         model_score = new ModelText(json.model.score),
         view_score = new ViewText(model_score, json.view.score),
@@ -77,9 +77,9 @@ define
       canvas.width = canvas_info.width;
       canvas.height = canvas_info.height;
 
+            game(json.game, models, view_ring);
       new ViewLoop(my_window, canvas, views).start();
       controlProximity(model_player);
-      game(json.game, models);
 
       console.log('init is called', json);
     }

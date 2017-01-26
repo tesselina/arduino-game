@@ -71,8 +71,8 @@
             "color": "#CCC"
         },
         "ring": {
-            "color": "#fff",
-            "borderWidth": 5,
+            "color": "rgba(225,225,225,0)",
+            "borderWidth": 10,
             "borderColor": [
                 "#88ff76",
                 "#76cc77",
