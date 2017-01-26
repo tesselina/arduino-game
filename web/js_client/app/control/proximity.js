@@ -7,8 +7,9 @@ define
     function () {
         "use strict";
 
-        function controlProximity(m_player) {
+        function controlProximity(m_player, view_ampel) {
             socket.on('range', function (state) {
+                view_ampel.draw(state);
                 if (state === false) {
                     m_player.start(m_player.r);
                 }

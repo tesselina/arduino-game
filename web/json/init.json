@@ -55,11 +55,17 @@
         }
     },
     "view": {
+        "ampel": {
+            "element": "ampel",
+            "green": "#88ff76",
+            "red": "#ff7a7a",
+            "size": 30
+        },
         "game_button": {
             "elementID": "game_button"
         },
         "player": {
-            "color": "#52515c"
+            "color": "#2c2c32"
         },
         "border": {
             "color": "#eceaff"

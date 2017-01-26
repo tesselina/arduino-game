@@ -52,6 +52,17 @@ body {
     width: 180px;
 }
 
+#ampel {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+#ampel > canvas{
+    position: absolute;
+    right: 20px;
+}
+
 #info {
     position: absolute;
     margin: 0 auto;

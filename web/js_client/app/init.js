@@ -21,6 +21,7 @@ define
     'model/border', 'model/player',
     'model/ring_generator',
     'view/circle', 'view/loop',
+    'view/ampel',
     'control/proximity',
     'logic/game'
   ],
@@ -30,6 +31,7 @@ define
     ModelBorder, ModelPlayer,
     RingGenerator,
     ViewCircle, ViewLoop,
+    ViewAmpel,
     controlProximity,
     game
   ) {
@@ -62,6 +64,8 @@ define
         model_info = new ModelText(json.model.info),
         view_info = new ViewText(model_info, json.view.info, my_window.document),
 
+        view_ampel = new ViewAmpel(json.view.ampel, my_window.document),
+
         models = {
           stage: canvas_info,
           border: model_border,
@@ -83,7 +87,7 @@ define
 
       game(json.game, models, view_ring);
       new ViewLoop(my_window, canvas, views).start();
-      controlProximity(model_player);
+      controlProximity(model_player, view_ampel);
     }
     return init; // Returns the object/function defined above.
   });
