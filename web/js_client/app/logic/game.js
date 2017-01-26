@@ -40,10 +40,10 @@ define
                 collisionBorderRing(border, ring_generator.model);
                 collisionBorderPlayer(border, player, stop);
                 collisionRingPlayer(ring_generator.model, player, function () {
-                    console.log('player hits');
                     score.value++;
                     ring_generator.toggle(stage, player.r);
                     view_ring.changeBorderColor();
+                    console.log('player hits', view_ring);
                 });
             }
 

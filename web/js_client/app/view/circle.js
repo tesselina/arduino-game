@@ -21,11 +21,11 @@ define
             this.color = json.color;
             this.borderWidth = json.borderWidth || 0;
             this.borderColor = json.borderColor || '#000';
+            
             if (json.borderColor instanceof Array) {
                 var colors = this.borderColors = json.borderColor;
                 this.borderColor = colors[Math.floor(Math.random() * colors.length)];
             }
-            console.log('all circles', this, model);
         }
 
         ViewCircle.prototype =
@@ -55,9 +55,9 @@ define
                     }
                 },
                 changeBorderColor: function () {
-                    console.log('change ring color');
                     if (this.borderColors) {
-                        var colors = this.borderColor;
+                        console.log('change ring color');
+                        var colors = this.borderColors;
                         this.borderColor = colors[Math.floor(Math.random() * colors.length)];
                     }
                 }

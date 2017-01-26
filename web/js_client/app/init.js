@@ -77,11 +77,13 @@ define
       canvas.width = canvas_info.width;
       canvas.height = canvas_info.height;
 
-            game(json.game, models, view_ring);
+      console.log('views before', views[1]);
+     /* view_ring.changeBorderColor();
+      console.log('views after', views[1]);*/
+
+      game(json.game, models, view_ring);
       new ViewLoop(my_window, canvas, views).start();
       controlProximity(model_player);
-
-      console.log('init is called', json);
     }
     return init; // Returns the object/function defined above.
   });
