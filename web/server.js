@@ -2,9 +2,9 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-
 var fs = require('fs');
 //var path = require("path");
+
 var board = require('./js_server/board');
 var port = process.env.PORT || 3000;
 

@@ -5,7 +5,6 @@ function PinListener() {
     //var dist = this.distance;
 
     EventEmitter.call(this);
-    console.log('pinlistener this', this);
 }
 
 util.inherits(PinListener, EventEmitter);

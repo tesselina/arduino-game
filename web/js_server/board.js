@@ -1,5 +1,5 @@
 var five = require("johnny-five");
-var temporal = require("temporal");
+//var temporal = require("temporal");
 var PinListener = require('./pinlistener');
 
 var listener = new PinListener();
