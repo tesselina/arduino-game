@@ -56,7 +56,6 @@ define
                 },
                 changeBorderColor: function () {
                     if (this.borderColors) {
-                        console.log('change ring color');
                         var colors = this.borderColors;
                         this.borderColor = colors[Math.floor(Math.random() * colors.length)];
                     }

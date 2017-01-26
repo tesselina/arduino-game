@@ -17,6 +17,7 @@ define
         function collisionBorderRing(border, ring) {
 
             //if player hits the border stop callback is called and game is over
+            
             if (border.r <= 150) {
                 border.vr = -border.vr;
             }

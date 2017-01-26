@@ -17,8 +17,6 @@ define
             this.y = (canvas.height - canvas.topbar) / 2 + canvas.topbar;
             this.r = some(range);
             this.show();
-
-            console.log('model ring called', this);
         }
 
         ModelRing.prototype =

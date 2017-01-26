@@ -12,9 +12,20 @@ define
 
         RingGenerator.prototype =
             {
-                toggle: function (canvas, player_radius) {
-                    this.model = new this.constructor(this.init, canvas, player_radius);
+                set: function(canvas, player){
                     this.count++;
+                    this.model = new this.constructor(this.init, canvas, player.r);
+                    return this.model;
+                },
+                toggle: function (canvas, player) {
+                    console.log('ring on toggle', player.r);
+                    this.count++;
+                    var self = this;
+                    this.model = {};
+                    setTimeout(function () {
+                        console.log('ring on timeout', player.r);
+                        self.model = new self.constructor(self.init, canvas, player.r);
+                    }, 1000);
                     return this.model;
                 },
                 reset: function () {

@@ -12,7 +12,7 @@ define
          *                  the paddle hits the ball.
          */
         function collisionRingPlayer(ring, player, cb) {
-            if (player.r >= ring.r-5) {
+            if (player.r >= ring.r-3) {
                 // if player hits a ring callback is called
                 if (cb) cb();
             }

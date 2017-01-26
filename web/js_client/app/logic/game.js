@@ -41,9 +41,8 @@ define
                 collisionBorderPlayer(border, player, stop);
                 collisionRingPlayer(ring_generator.model, player, function () {
                     score.value++;
-                    ring_generator.toggle(stage, player.r);
+                    ring_generator.toggle(stage, player);
                     view_ring.changeBorderColor();
-                    console.log('player hits', view_ring);
                 });
             }
 
@@ -66,7 +65,7 @@ define
                 border.reset();
                 player.reset();
 
-                ring_generator.toggle(stage, player.r);
+                ring_generator.set(stage, player);
 
                 button.label = json.stop;
                 button.onClick = stop;

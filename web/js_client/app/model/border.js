@@ -12,6 +12,7 @@ define
         function ModelBorder(json, canvas) {
             this.r_start = json.r.start;
             this.vr_start = json.vr;
+            this.ar = json.ar;
             this.x = canvas.width / 2;
             this.y = (canvas.height - canvas.topbar) / 2 + canvas.topbar;
 
@@ -71,6 +72,7 @@ define
                   */
                 move:
                 function (p_seconds) {
+                    this.vr -= this.ar;
                     this.r += this.vr * p_seconds;
                 }
             };
