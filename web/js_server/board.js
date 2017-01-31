@@ -6,7 +6,6 @@
 
 
 var five = require("johnny-five");
-//var temporal = require("temporal");
 var PinListener = require('./pinlistener');
 
 var listener = new PinListener();
@@ -33,6 +32,9 @@ board.on("ready", function () {
             red.on();
         }
     });
+
+
+    //var temporal = require("temporal");
 
     /*   
     /** My first attempt to calculate the distance by using the value and the formular given on the product website*/

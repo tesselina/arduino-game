@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-// When a client connects, we note it in the console
+// When a client connects we send out the distance change and range status
 io.on('connection', function (socket) {
   console.log('A client is connected!');
 
