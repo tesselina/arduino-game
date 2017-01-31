@@ -1,20 +1,15 @@
-/**
- * @author    Tesselina Späth <tesselina.spaeth@hs-augsburg.de>
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
  * @copyright 2017
  * @license   CC-BY-NC-SA-4.0
  */
 
-
-//var v_timer = setInterval(print, 200);
-
-socket.on('warning', function (message) {
+/*socket.on('warning', function (message) {
   //console.log('Serverwarnung: ' + message);
-});
+});*/
 /*<!-- var name = !{JSON.stringify(name)}; -->
 */
 
-
-/** @module app/init */
 define
   (['model/text', 'view/text',
     'model/button', 'view/button',
@@ -82,12 +77,10 @@ define
       canvas.height = canvas_info.height;
 
       console.log('views before', views[1]);
-     /* view_ring.changeBorderColor();
-      console.log('views after', views[1]);*/
 
       game(json.game, models, view_ring);
       new ViewLoop(my_window, canvas, views).start();
       controlProximity(model_player, view_ampel);
     }
-    return init; // Returns the object/function defined above.
+    return init;
   });

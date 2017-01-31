@@ -15,21 +15,40 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="topbar">
-            <div id="score"></div>
-            <div id="game_button"></div>
-            <div id="ampel">
-                Sensor: 
-            </div> 
+    <h1>RingBall</h1>
+    <div id="box">
+        <div class="rules">
+            <h3>Um was gehts?</h3>
+            <p>RingBall ist ein Projekt, das für das Fach Interaktion und Programmierung entwickelt wurde.
+                Mit einem Infrarot-Entfernungssensor, einem Arduino und Node.js ist somit ein Spiel entstanden, das nicht über herkömmliche Eingabemedien eines Computers gesteuert werden kann.
+            </p>
+            <h3>Wie wird gespielt?</h3>
+            <p>Über den Controller kannst du die Größe des schwarzen Balls steuern. Versuche so viele Ringe wie möglich zu sammeln
+                ohne von der äußeren Wand berührt zu werden.</p>
+                <h3>Auf was muss ich achten?</h3>
+                <p>Der Controller misst zwischen fünf und 50cm Abstand und passt dementsprechen den Radius des Spielers an. Je höher die Distanz zum Sensor umso höher ist auch die Wahrscheinlichkeit vom Sensor abzukommen. Hier hilft die Sensor-Ampel den Überblick zu bewahren.</p>
         </div>
-        <div id="info"></div>
-        <canvas id="canvas"></canvas>
+        <div class="container">
+            <div id="topbar">
+                <div id="score"></div>
+                <div id="game_button"></div>
+                <div id="ampel">
+                    Sensor:
+                </div>
+            </div>
+            <div class="canvas-wrapper">
+                <div id="info"></div>
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
     </div>
+    <p class="footer">
+        Tesselina Späth, WS2016/17 <br> Interaktion und Programmierung, Interaktive Medien, Hochschule Augsburg
+    </p>
     <script src="/socket.io/socket.io.js"></script>
     <script>var socket = io.connect('http://localhost:3000');</script>
-    <script data-main="js_client/main" src="js_client/lib/require/require.js"></script>
-    <!--<script type="text/javascript" src="js_client/main.js"></script>-->
+<script data-main="js_client/main" src="js_client/lib/require/require.js"></script>
+<!--<script type="text/javascript" src="js_client/main.js"></script>-->
 </body>
 
 </html>

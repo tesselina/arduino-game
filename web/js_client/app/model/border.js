@@ -1,3 +1,9 @@
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
+ * @license   CC-BY-NC-SA-4.0
+ */
+
 define
     ([],
     function () {
@@ -12,9 +18,9 @@ define
         function ModelBorder(json, canvas) {
             this.r_start = json.r.start;
             this.vr_start = json.vr;
-            this.ar = json.ar;
+            this.ar_start = json.ar;
             this.x = canvas.width / 2;
-            this.y = (canvas.height - canvas.topbar) / 2 + canvas.topbar;
+            this.y = canvas.height / 2;
 
             this.reset(); // initializes further attributes
         }
@@ -51,6 +57,7 @@ define
                 stop:
                 function () {
                     this.vr = 0;
+                    this.ar = 0;
                 },
 
                 /**
@@ -61,6 +68,7 @@ define
                     // react only if the ball is not already moving
                     if (this.visible === true && this.vr === 0) {
                         this.vr = this.vr_start;
+                        this.ar = this.ar_start;
                     }
                 },
 

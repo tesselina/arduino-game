@@ -2,7 +2,7 @@
     "canvas": {
         "element": "canvas",
         "width": 500,
-        "height": 550,
+        "height": 500,
         "topbar": 50,
         "color": "#413746"
     },
@@ -13,8 +13,8 @@
             "min": 200,
             "max": 500
         },
-        "welcome": "Sammle Ringe",
-        "gameover": "Du hast verloren",
+        "welcome": "",
+        "gameover": "Gameover",
         "start": "Starten",
         "stop": "Beenden"
     },
@@ -43,7 +43,7 @@
             "limit": 1,
             "r": {
                 "@some": "int",
-                "max": 240
+                "max": 220
             }
         },
         "info": {
@@ -75,8 +75,8 @@
             "borderWidth": 6,
             "borderColor": [
                 "#88ff76",
-                "#76cc77",
-                "#ff7a7a",
+                "#76ccff",
+                "#70fff7",
                 "#ffda7a",
                 "#9d7aff"
             ]

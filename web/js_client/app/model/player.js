@@ -1,3 +1,9 @@
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
+ * @license   CC-BY-NC-SA-4.0
+ */
+
 define
     ([],
     function () {
@@ -15,7 +21,8 @@ define
         function ModelPlayer(json, canvas) {
             this.r_start = json.r.start;
             this.x = canvas.width / 2;
-            this.y = (canvas.height - canvas.topbar) / 2 + canvas.topbar;
+            this.y = canvas.height / 2;
+            this.ar = 0;
 
             this.reset(); // initializes further attributes
         }
@@ -73,6 +80,7 @@ define
                   */
                 move:
                 function (p_seconds) {
+                    this.vr -= this.ar;
                     this.r += this.vr * p_seconds;
                 }
             };

@@ -1,3 +1,9 @@
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
+ * @license   CC-BY-NC-SA-4.0
+ */
+
 define
     (['wk/util/some'],
     function (some) {
@@ -14,7 +20,7 @@ define
             range.min = player_radius + 10;
 
             this.x = canvas.width / 2;
-            this.y = (canvas.height - canvas.topbar) / 2 + canvas.topbar;
+            this.y = canvas.height / 2;
             this.r = some(range);
             this.show();
         }

@@ -1,6 +1,6 @@
-/**
- * @author    Wolfgang Kowarschick <kowa@hs-augsburg.de>
- * @copyright 2016
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
  * @license   CC-BY-NC-SA-4.0
  */
 
@@ -34,6 +34,9 @@ define
             // Stop the game and display a welcome message.
             stop();
             info.value = json.welcome;
+            border.show();
+            player.show();
+            model_loop.start();
 
             // Collision detection and handling.
             function all_collisions() {
@@ -51,6 +54,7 @@ define
                 model_loop.stop();
                 border.hide();
                 player.hide();
+                ring_generator.reset();
 
                 button.label = json.start;
                 button.onClick = start;

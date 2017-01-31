@@ -1,3 +1,9 @@
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
+ * @license   CC-BY-NC-SA-4.0
+ */
+
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);

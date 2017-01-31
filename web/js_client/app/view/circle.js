@@ -1,6 +1,6 @@
-/**
- * @author    Wolfgang Kowarschick <kowa@hs-augsburg.de>
- * @copyright 2016
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
  * @license   CC-BY-NC-SA-4.0
  */
 

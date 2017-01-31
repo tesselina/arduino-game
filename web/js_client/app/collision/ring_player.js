@@ -1,16 +1,14 @@
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
+ * @license   CC-BY-NC-SA-4.0
+ */
+
 define
     ([],
     function () {
         "use strict";
 
-        /**
-         * A ball can collide with the „paddle“ of the canvas. In case, it is mirrored.
-         *
-         * @param p_ball    {ModelBall}.
-         * @param p_paddle  {ModelPaddle}.
-         * @param cb    A callback function that is called when
-         *                  the paddle hits the ball.
-         */
         function collisionRingPlayer(ring, player, cb) {
             if (player.r >= ring.r-3) {
                 // if player hits a ring callback is called

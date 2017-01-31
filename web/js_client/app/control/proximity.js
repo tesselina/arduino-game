@@ -1,7 +1,9 @@
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
+ * @license   CC-BY-NC-SA-4.0
+ */
 
-
-
-/** @module app/module */
 define
     ([],
     function () {
@@ -15,8 +17,10 @@ define
                 }
             });
             socket.on('dist', function (dist) {
+                console.log('dist', dist);
                 var val = dist*5.5;
-            if(dist >= 40) val= dist*6;
+            if(dist >= 40) m_player.ar = -10;
+            else if (dist <= 30) m_player.ar = 0;
                 m_player.start(val);
             });
         }

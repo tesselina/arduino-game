@@ -1,3 +1,10 @@
+/** 
+ * @author    Tesselina Spaeth <tesselina.spaeth@hs-augsburg.de>
+ * @copyright 2017
+ * @license   CC-BY-NC-SA-4.0
+ */
+
+
 var five = require("johnny-five");
 //var temporal = require("temporal");
 var PinListener = require('./pinlistener');
@@ -7,17 +14,23 @@ var board = new five.Board();
 var controller = "2Y0A21";
 
 board.on("ready", function () {
+    var green = new five.Led(10);
+    var red   = new five.Led(11);
     var proximity = new five.Proximity({
         controller: controller,
         pin: "A0"
     });
-
+ 
     proximity.on("data", function () {
         if (this.cm <= 50 && this.cm >= 5) {
             listener.range(true);
             listener.distanceChange(this.cm);
+            green.on();
+            red.off();
         } else {
             listener.range(false);
+            green.off();
+            red.on();
         }
     });
 
@@ -44,3 +57,4 @@ module.exports.listener = listener;
         var strobe = new five.Pin(13);
 temporal.loop(60, function (loop) {
             strobe[loop.called % 2 === 0 ? "high" : "low"]();*/
+
